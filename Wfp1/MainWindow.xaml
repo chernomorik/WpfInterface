@@ -1,0 +1,76 @@
+﻿<Window x:Class="First.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:First"
+        mc:Ignorable="d"
+        x:Name="Mw"
+        Title="MainWindow" Height="345" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Green">
+            <Setter Property="Background" Value="Green" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="1" />
+        </Style>
+        <Style TargetType="Button" x:Key="Purple">
+            <Setter Property="Background" Value="Purple" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="1" />
+        </Style>
+        <Style TargetType="Button" x:Key="Yellow">
+            <Setter Property="Background" Value="Yellow" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="1" />
+        </Style>
+        <Style TargetType="Button" x:Key="Red">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="1" />
+        </Style>
+        <Style TargetType="Button" x:Key="Pink">
+            <Setter Property="Background" Value="Pink" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="1" />
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Menu Background="White" BorderBrush="Navy" BorderThickness="1">
+            
+            <MenuItem Header="_Файл" MouseEnter="MenuItem_MouseEnter">
+                <MenuItem Header="Изменить цвет" MouseEnter="ChangeColor">
+                    <MenuItem Header="Зелёный" Click="MenuItem_Click" MouseEnter="Button_MouseEnter"/>
+                    <MenuItem Header="Фиолетовый" Click="MenuItem_Click_1" MouseEnter="Button_MouseEnter_1"/>
+                    <MenuItem Header="Жёлтый" Click="MenuItem_Click_2"  MouseEnter="Button_MouseEnter_2"/>
+                    <MenuItem Header="Красный" Click="MenuItem_Click_3" MouseEnter="Button_MouseEnter_3"/>
+                    <MenuItem Header="Розовый" Click="MenuItem_Click_4" MouseEnter="Button_MouseEnter_4"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="О нас" Click="MenuItem_Click_5" MouseEnter="About"/>
+                <Separator />
+                <MenuItem Header="Закрыть" Click="MenuItem_Click_6" MouseEnter="Close"/>
+            </MenuItem>
+        </Menu>        <ComboBox SelectedIndex="0" Width="262" MouseEnter="ChangeColor" >
+            <ComboBoxItem >Изменить цвет</ComboBoxItem>
+            <Button Style="{StaticResource ResourceKey=Green}" Click="Green" MouseEnter="Button_MouseEnter">Зелёный</Button>
+            <Button Style="{StaticResource ResourceKey=Purple}" Click="Purple" MouseEnter="Button_MouseEnter_1">Фиолетовый</Button>
+            <Button Style="{StaticResource ResourceKey=Yellow}" Click="Yellow" MouseEnter="Button_MouseEnter_2">Жёлтый</Button>
+            <Button Style="{StaticResource ResourceKey=Red}" Click="Red" MouseEnter="Button_MouseEnter_3">Красный</Button>
+            <Button Style="{StaticResource ResourceKey=Pink}" Click="Pink" MouseEnter="Button_MouseEnter_4">Розовый</Button>
+        </ComboBox>
+        <Button Click="Button_Click_1" Width="262" MouseEnter="About">О нас</Button>
+        <Button Click="Button_Click_2" Width="262" MouseEnter="Close">Закрыть</Button>
+        
+        <StatusBar Height="17" Margin="0,230,0,10" MouseEnter="StatusBar_MouseEnter" MouseLeave="StatusBar_MouseLeave">
+            <StatusBarItem Margin="0,-40,0,0" Width="797">
+                <TextBlock x:Name="statusbar"></TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </StackPanel>
+    
+</Window>
