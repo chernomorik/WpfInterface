@@ -6,17 +6,20 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        
-        <Slider Minimum="8" Maximum="30" x:Name="SliderFontSize"></Slider>
-        <TextBlock x:Name="Message" FontSize="{Binding ElementName=SliderFontSize, Path=Value}">
-         Пример WPF-приложения для демонстрации привязки данных
-        </TextBlock>
-        
-        <TextBox x:Name="t1" Text="{Binding ElementName=t2, Path=FontSize}" />
-        <TextBox x:Name="t2" Text="{Binding ElementName=t3, Path=Text}" />
-        <TextBox x:Name="t3" Text="{Binding ElementName=slider2,Path=Value}"/>
-        <Slider x:Name="slider1" Value="{Binding ElementName=slider2, Path=Value}" />
-        <Slider x:Name="slider2" Value="{Binding ElementName=t3, Path=Text}" />
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label  x:Name="label" 
+                Content="Размер этого текста должен меняться"
+                VerticalAlignment="Bottom" Margin="0, 20"
+                FontSize="{Binding ElementName=slider, Path=Value}"/>
+        <TextBox x:Name="textbox" Grid.Row="1" Width="100" Height="50" BorderBrush="Black"
+                 VerticalAlignment="Bottom"/>
+        <Slider x:Name="slider" Margin="0, 50" Grid.Row="2"
+                Minimum="10" Maximum="50"
+                Value="{Binding ElementName=textbox, Path=Text, Mode=TwoWay}"/>
+    </Grid>
 </Window>

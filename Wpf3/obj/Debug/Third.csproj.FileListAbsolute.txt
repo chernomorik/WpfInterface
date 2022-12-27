@@ -1,0 +1,15 @@
+M:\WpfInterface\Wpf3\bin\Debug\Third.exe.config
+M:\WpfInterface\Wpf3\bin\Debug\Third.exe
+M:\WpfInterface\Wpf3\bin\Debug\Third.pdb
+M:\WpfInterface\Wpf3\obj\Debug\Third.csproj.AssemblyReference.cache
+M:\WpfInterface\Wpf3\obj\Debug\MainWindow.g.cs
+M:\WpfInterface\Wpf3\obj\Debug\App.g.cs
+M:\WpfInterface\Wpf3\obj\Debug\Third_MarkupCompile.cache
+M:\WpfInterface\Wpf3\obj\Debug\Third_MarkupCompile.lref
+M:\WpfInterface\Wpf3\obj\Debug\MainWindow.baml
+M:\WpfInterface\Wpf3\obj\Debug\Third.g.resources
+M:\WpfInterface\Wpf3\obj\Debug\Third.Properties.Resources.resources
+M:\WpfInterface\Wpf3\obj\Debug\Third.csproj.GenerateResource.cache
+M:\WpfInterface\Wpf3\obj\Debug\Third.csproj.CoreCompileInputs.cache
+M:\WpfInterface\Wpf3\obj\Debug\Third.exe
+M:\WpfInterface\Wpf3\obj\Debug\Third.pdb

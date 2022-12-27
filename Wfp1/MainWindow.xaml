@@ -8,6 +8,13 @@
         x:Name="Mw"
         Title="MainWindow" Height="345" Width="800">
     <Window.Resources>
+        <Image x:Key="resourceImage8" Source="image/green.png" Width="30"/>
+        <Image x:Key="resourceImage4" Source="image/purple.png" Width="30"/>
+        <Image x:Key="resourceImage5" Source="image/yellow.png" Width="30"/>
+        <Image x:Key="resourceImage6" Source="image/red.png" Width="30"/>
+        <Image x:Key="resourceImage7" Source="image/pink.png" Width="30"/>
+        <Image x:Key="resourceImage" Source="image/r.png"/>
+        <Image x:Key="resourceImage2" Source="image/close.png"/>
         <Style TargetType="Button" x:Key="Green">
             <Setter Property="Background" Value="Green" />
             <Setter Property="Foreground" Value="Black" />
@@ -56,15 +63,18 @@
                 <MenuItem Header="Закрыть" Click="MenuItem_Click_6" MouseEnter="Close"/>
             </MenuItem>
         </Menu>        <ComboBox SelectedIndex="0" Width="262" MouseEnter="ChangeColor" >
-            <ComboBoxItem >Изменить цвет</ComboBoxItem>
-            <Button Style="{StaticResource ResourceKey=Green}" Click="Green" MouseEnter="Button_MouseEnter">Зелёный</Button>
-            <Button Style="{StaticResource ResourceKey=Purple}" Click="Purple" MouseEnter="Button_MouseEnter_1">Фиолетовый</Button>
-            <Button Style="{StaticResource ResourceKey=Yellow}" Click="Yellow" MouseEnter="Button_MouseEnter_2">Жёлтый</Button>
-            <Button Style="{StaticResource ResourceKey=Red}" Click="Red" MouseEnter="Button_MouseEnter_3">Красный</Button>
-            <Button Style="{StaticResource ResourceKey=Pink}" Click="Pink" MouseEnter="Button_MouseEnter_4">Розовый</Button>
+            <ComboBoxItem >
+                <Image Source="image/change.png" Width="30"></Image>
+            </ComboBoxItem>
+            <Button Content="{StaticResource resourceImage8}" Click="Green" MouseEnter="Button_MouseEnter"></Button>
+            <Button Content="{StaticResource resourceImage4}" Click="Purple" MouseEnter="Button_MouseEnter_1"></Button>
+            <Button Content="{StaticResource resourceImage5}" Click="Yellow" MouseEnter="Button_MouseEnter_2"></Button>
+            <Button Content="{StaticResource resourceImage6}" Click="Red" MouseEnter="Button_MouseEnter_3"></Button>
+            <Button Content="{StaticResource resourceImage7}" Click="Pink" MouseEnter="Button_MouseEnter_4"></Button>
         </ComboBox>
-        <Button Click="Button_Click_1" Width="262" MouseEnter="About">О нас</Button>
-        <Button Click="Button_Click_2" Width="262" MouseEnter="Close">Закрыть</Button>
+        <Button  Content="{StaticResource resourceImage}" Click="Button_Click_1" Width="262" MouseEnter="About" Height="38" Margin="265,0">
+        </Button>
+        <Button   Content="{StaticResource resourceImage2}" Click="Button_Click_2" Width="262" MouseEnter="Close" Height="35" Margin="265,0"></Button>
         
         <StatusBar Height="17" Margin="0,230,0,10" MouseEnter="StatusBar_MouseEnter" MouseLeave="StatusBar_MouseLeave">
             <StatusBarItem Margin="0,-40,0,0" Width="797">
